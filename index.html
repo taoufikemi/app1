@@ -44,11 +44,7 @@ function initApp() {
     }
 }
 
-document.addEventListener('deviceready', initApp, false);
-
-function pub(){
-AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:true}); 
-}
+document.addEventListener('deviceready', initApp, false); 
     </script>
     
 <div data-role="page" id="menu">
@@ -57,7 +53,7 @@ AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:true});
   </div>
    <div data-role="content">
     <ul data-role="listview">
-      <li onClick="pub()"><a href="#intro" data-transition="flip"><img src="images/intro.png" width="332" height="334" alt=""/>
+      <li onClick="AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:true});"><a href="#intro" data-transition="flip"><img src="images/intro.png" width="332" height="334" alt=""/>
       <h3>INTRODUCTION</h3>
       </a></li>
       
